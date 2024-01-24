@@ -17,10 +17,11 @@ header{
     width: 49%;
     height: 100%;
 }
+
 /*main*/
 main{
     width: 100%;
-    height:65%;/*40% main 25% links*/
+    height:60%;/*40% main 25% links*/
 }
 
 #main-content{
@@ -89,4 +90,59 @@ footer{
 
 .display-inline{
     display: inline;
+}
+
+@media (min-width: 321px) and (max-width: 768px){
+    body{
+        width: 768px;
+        height: 768px;
+    }
+    /*header*/
+
+    header{
+        width: 100%;
+        height: 15%;
+    }
+    
+    #header-left, #header-right{
+        width: 100%;
+        height: 48%;
+        margin: 0.2em auto;
+    }
+    /*main content*/
+    main{
+        width: 100%;
+        height:60%;/*40% main 25% links*/
+    }
+    #main-content{
+        width: 100%;
+        height: 40%;
+    }
+    
+    #photos{
+        width: 100%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .photo-size{
+        width: 100%;
+        height: 32%;
+    }
+
+    /*footer*/
+    footer{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .reference-size{
+        width: 100%;/*100% / 4 references and a little of space*/
+        height: 23%;
+    }
+
 }
