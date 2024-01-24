@@ -49,8 +49,24 @@ footer{
     justify-content: space-between;
 }
 
+#left-reference{
+    width: 49%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.1em;
+}
+
+#right-reference{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.1em;
+}
+
 .reference-size{
-    width: 24%;/*100% / 4 references and a little of space*/
+    width: 49%;/*100% / 4 references and a little of space*/
     height: 100%;
 }
 
@@ -92,57 +108,122 @@ footer{
     display: inline;
 }
 
+/*----------------------------- 768 px --------------------- */
 @media (min-width: 321px) and (max-width: 768px){
-    body{
-        width: 768px;
-        height: 768px;
-    }
-    /*header*/
+body{
+    width: 768px;
+    height: 768px;
+}
+/*header*/
+header{
+    width: 100%;
+    height: 15%;
+}
 
-    header{
-        width: 100%;
-        height: 15%;
-    }
-    
-    #header-left, #header-right{
-        width: 100%;
-        height: 48%;
-        margin: 0.2em auto;
-    }
-    /*main content*/
-    main{
-        width: 100%;
-        height:60%;/*40% main 25% links*/
-    }
-    #main-content{
-        width: 100%;
-        height: 40%;
-    }
-    
-    #photos{
-        width: 100%;
-        height: 60%;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .photo-size{
-        width: 100%;
-        height: 32%;
-    }
+#header-left, #header-right{
+    width: 100%;
+    height: 48%;
+    margin: 0.2em auto;
+}
+/*main content*/
+main{
+    width: 100%;
+    height:60%;/*40% main 25% links*/
+}
+#main-content{
+    width: 100%;
+    height: 40%;
+}
 
-    /*footer*/
-    footer{
-        width: 100%;
-        height: 20%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
+#photos{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+}
 
-    .reference-size{
-        width: 100%;/*100% / 4 references and a little of space*/
-        height: 23%;
-    }
+.photo-size{
+    width: 100%;
+    height: 32%;
+}
+/*footer*/
+footer{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+}
+#left-reference, #right-reference{
+    width: 100%;
+    height: 49%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.2em;
+}
+.reference-size{
+    width: 49%;
+    height: 99%;
+}
+
+}
+/*----------------------------- 320 px --------------------- */
+@media(max-width: 320px){
+body{
+    width: 99vw;
+    height: calc(310vw + 15vh + 25vh);
+}
+
+/*header*/
+header{
+    width: 99vw;
+    height: 15vh;
+}
+
+#header-left, #header-right{
+    width: 100%;
+    height: 49%;
+    margin: 0.2em auto;
+}
+
+/*main content*/
+
+main{
+    width: 99vw;
+    height: calc(13vh + 303vw);
+}
+#main-content{
+    width: 99vw;
+    height: 10vh;
+    margin-top: 1em;
+}
+
+#photos{
+    width: 99vw;
+    height: 300vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-size{
+    
+    width: 99vw;
+    height: 98vw;
+}
+
+/*footer*/
+footer{
+    width: 99vw;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vw;
+    background-color: grey;
+}
+#left-reference, #right-reference{
+    display: none;
+}
+
+
+/*utils*/
 
 }
